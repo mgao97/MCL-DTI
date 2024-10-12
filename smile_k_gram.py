@@ -92,7 +92,8 @@ def k_gram_save(data_file, k, save_name):
 
 
 if __name__ == '__main__':
-    dataset_name = "Davis"
+    # dataset_name = "Davis"
+    dataset_name = "BindingDB"
     k = 1
     dim = 512
     smiles = get_k_gram_seqs(get_all_smiles(dataset_name), k)

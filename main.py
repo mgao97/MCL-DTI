@@ -253,6 +253,7 @@ if __name__ == '__main__':
     parser.add_argument('--lr_decay', type=float, default=0.85)
     parser.add_argument('--drop_ratio', type=float, default=0.)
     parser.add_argument('--epochs', type=int, default=100)
-    parser.add_argument("--device", default='cuda:0')
+    # parser.add_argument("--device", default='cuda:0')
+    parser.add_argument("--device", default='cpu')
     opt = parser.parse_args()
     model_run(opt)

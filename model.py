@@ -5,13 +5,14 @@ import torch.nn.functional as F
 import numpy as np
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 
-if torch.cuda.is_available():
-    device = torch.device('cuda')
-    print('The code uses GPU...')
-else:
-    device = torch.device('cpu')
-    print('The code uses CPU!!!')
+# if torch.cuda.is_available():
+#     device = torch.device('cuda')
+#     print('The code uses GPU...')
+# else:
+#     device = torch.device('cpu')
+#     print('The code uses CPU!!!')
 
+device = torch.device('cpu')
 
 def _init_weight(m):
     if isinstance(m, nn.Linear):
