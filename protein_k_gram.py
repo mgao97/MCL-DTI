@@ -89,7 +89,8 @@ def k_gram_save(data_file, k, save_name):
 
 
 if __name__ == '__main__':
-    dataset_name = "Davis"
+    # dataset_name = "Davis"
+    dataset_name = "BindingDB"
     k = 1
     dim = 256
     proteins = get_k_gram_seqs(get_all_proteins(dataset_name), k)

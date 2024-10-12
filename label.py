@@ -1,7 +1,7 @@
 import os
 import numpy as np
 
-
+# 处理一个包含化学分子信息的数据文件，并将有效的交互数据保存到一个 NumPy 数组中
 def label_save(data_file):
     with open(data_file, 'r') as f:
         data_list = f.read().strip().split('\n')
@@ -31,7 +31,7 @@ def label_save(data_file):
 
 
 if __name__ == '__main__':
-    dataset_name = "Davis"
+    dataset_name = "BindingDB"
     data_root = "data/" + dataset_name
     train_file = data_root + "/" + dataset_name + "_train.txt"
     test_file = data_root + "/" + dataset_name + "_test.txt"
