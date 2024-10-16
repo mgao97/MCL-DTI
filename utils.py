@@ -24,7 +24,12 @@ class Dataset(torch.utils.data.Dataset):
         smiles_feature = self.smiles[item]
         pro_feature = self.proteins[item]
         label_feature = self.label[item]
-        img = Image.open(img_path).convert('RGB')
+        try:
+            img = Image.open(img_path).convert('RGB')
+        except FileNotFoundError:
+            print(f"File not found: {img_path}")
+            # 返回一个默认的全黑图像（假设大小为 256x256）
+            img = Image.fromarray(np.zeros((256, 256, 3), dtype=np.uint8))
         img = self.transformImg(img)
 
         # print("img:", len(self.imgs))

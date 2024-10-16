@@ -146,6 +146,9 @@ def model_run(args):
             val(args, model_file, val_loader)
             aucs = test(args, model_file, test_dataset, test_loader, result_file)
 
+        end_time = datetime.now().strftime(ISOTIMEFORMAT)
+        print(f"数据集：{args.dataset_name} 运行时间: {end_time}")
+
 
 def val(args, file_model, val_loader):
     torch.manual_seed(2)
